@@ -1,0 +1,5 @@
+Metric,N,Statistic,RawP,Value,Count,Measure
+Tip rate vs per-head spend,342,-0.45460080972190353,7.610594252457354e-19,,,Spearman rho
+Tip rate vs party size,342,-0.0948940468056378,0.07969987236838053,,,Spearman rho
+Median tip amount,359,,,2.87,,Currency units
+Tips in 0.50 increments,359,,,40.11142061281337,144.0,Percent and count

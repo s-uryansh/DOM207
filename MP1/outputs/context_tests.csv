@@ -1,0 +1,8 @@
+Family,Hypothesis,Test,NullHypothesis,N,Statistic,RawP,Effect,EffectMeasure,AdjustedP,Decision
+Context,C1,Pooled bill amount by day,All pooled day distributions are equal,351,13.84063162577151,0.00313030506695399,0.03124101333075363,Epsilon-squared,0.004382427093735586,Reject H0
+Context,C2,Dinner vs lunch bill amount,Dinner and lunch distributions are equal,358,16470.5,0.12287393134404241,0.0974480277185501,Rank-biserial (Dinner-Lunch),0.14335291990138282,Do not reject H0
+Context,C3,Bill amount vs tip amount,No monotonic association,362,0.6391915422058756,5.74501208716861e-43,0.6391915422058756,Spearman rho,4.0215084610180275e-42,Reject H0
+Context,C4,Party size vs bill amount,No monotonic association for party sizes 1-6,345,0.5686596178597301,6.04440996443374e-31,0.5686596178597301,Spearman rho,2.115543487551809e-30,Reject H0
+Context,C5,Tip rate by day,All day tip-rate distributions are equal,351,3.4207048348807447,0.3311929921174136,0.001212405864209639,Epsilon-squared,0.3311929921174136,Do not reject H0
+Context,C6,Per-head spend: party size 2 vs 4,Two- and four-person per-head distributions are equal,237,5850.0,0.0004845643294904009,0.3316640109264739,Rank-biserial (2-person minus 4-person),0.0008479875766082015,Reject H0
+Context,C7,Weekend vs weekday lunch per-head spend,Weekend and weekday lunch per-head distributions are equal,119,2180.0,7.315808245478982e-05,0.4591700133868808,Rank-biserial (Weekend-Weekday),0.0001707021923945096,Reject H0

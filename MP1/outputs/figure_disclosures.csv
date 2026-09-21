@@ -1,0 +1,7 @@
+Figure,Records,Disclosure
+Figure 1 day panel,14,Outliers hidden using the 1.5 x IQR plotting rule; observations remain in tests
+Figure 1 service-period panel,11,Outliers hidden using the 1.5 x IQR plotting rule; observations remain in tests
+Figure 1 pooled day base,351,All analysis-ready rows with valid Day
+Figure 2 stratified base,347,Analysis-ready rows with valid Day and Time
+Figure 4 probable errors removed,3,Probable tip-entry errors removed
+Figure 4 rates above 30% cap,7,"Rounded rates: 33, 38, 65, 104, 112, 118, 166%"

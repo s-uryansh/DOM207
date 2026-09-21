@@ -1,0 +1,9 @@
+Family,Hypothesis,Test,NullHypothesis,N,Statistic,RawP,Effect,EffectMeasure,AdjustedP,Decision
+Primary,H1,Bill amount by day within lunch,All lunch-day distributions are equal,128,25.158400105946754,1.4306669328331351e-05,0.1786967750479577,Epsilon-squared,3.81511182088836e-05,Reject H0
+Primary,H2,Bill amount by day within dinner,All dinner-day distributions are equal,219,3.553662985988711,0.31386861540928307,0.0025751766790172615,Epsilon-squared,0.4184914872123774,Do not reject H0
+Primary,H3,Weekend vs weekday lunch bill,Weekend and weekday lunch distributions are equal,128,2654.0,2.0093486646220605e-06,0.5292422932872372,Rank-biserial (Weekend-Weekday),8.037394658488242e-06,Reject H0
+Primary,H4,Party size vs per-head spend,No monotonic association for party sizes 1-6,345,-0.19744451390915713,0.00022385475538918718,-0.19744451390915713,Spearman rho,0.00044770951077837437,Reject H0
+Primary,H5,Bill amount vs tip rate,No monotonic association after probable tip errors are removed,359,-0.4334278074106942,7.119525570715373e-18,-0.4334278074106942,Spearman rho,5.695620456572299e-17,Reject H0
+Primary,H6,Tip rate by waiter gender,Female- and male-waiter distributions are equal,362,16263.0,0.802265427150227,0.015422077922077948,Rank-biserial (Female-Male),0.802265427150227,Do not reject H0
+Primary,H7,Tip rate by smoker status,No-smoker and smoker distributions are equal,353,16249.5,0.18983307458934595,0.08221778221778231,Rank-biserial (No-Yes),0.30373291934295354,Do not reject H0
+Primary,H8,Tip rate by service period,Lunch and dinner distributions are equal,358,14434.0,0.5450443652929482,-0.03824626865671643,Rank-biserial (Lunch-Dinner),0.6229078460490837,Do not reject H0

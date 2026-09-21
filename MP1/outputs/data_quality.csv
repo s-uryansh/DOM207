@@ -1,0 +1,17 @@
+Check,Records,Treatment
+Source records,365,Retained; source workbook unchanged
+Exact duplicate-looking rows (7 exact; 8-row pasted block at Excel rows 303-310),7,All retained; pasted copy flagged as DuplicateBlock
+Amount text formats repaired,3,Comma/internal hyphen converted to decimal
+Tip text formats repaired,1,Trailing backtick removed
+Categorical values normalized,65,"Only unambiguous variants mapped, including San/Sn to Sun"
+Ambiguous/missing day,11,Excluded only from day analysis
+Ambiguous/missing time,4,Excluded only from time analysis
+Ambiguous/missing smoker status,9,Excluded only from smoker analysis
+Non-positive/unparseable amount,1,Excluded from monetary analysis
+Missing/negative tip,2,Excluded from tip analysis
+Analysis-ready amount/tip records,362,Primary analytical base
+Probable tip entry errors,3,Tip exceeds three times bill; excluded from tip-rate versus bill test
+Suspect original-block tip,1,SourceRow 296 has tip 13.55; retained in primary analysis and tested in sensitivity
+Other flagged tip rates above 100%,4,Retained; flagged but not asserted as errors
+Core party-size records (1-6),345,Used for party-size and per-head analysis
+Pasted-block sensitivity sample,354,Drops SourceRow 303-310 only; primary conclusions re-estimated

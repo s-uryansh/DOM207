@@ -1,0 +1,3 @@
+Time,Transactions,BillMedian,BillQ1,BillQ3,ObservedBillAmount,PerHeadN,PerHeadMedian
+Lunch,134,18.8,13.315,25.6725,2686.28,125,8.166666666666666
+Dinner,224,19.795,15.3,26.365000000000002,4951.49,216,7.645
