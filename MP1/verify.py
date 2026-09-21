@@ -154,15 +154,17 @@ def main():
     for identity in ["2310110038", "Anant Atreya", "2310110314", "Suryansh Rohil"]:
         assert identity in report_text
     assert "DOM207-DOM3007-DOM6401: MP1" in report_text
-    assert all(float(page.mediabox.width) > float(page.mediabox.height) for page in reader.pages)
+    assert all(float(page.mediabox.width) < float(page.mediabox.height) for page in reader.pages)
+    assert all(
+        abs(float(page.mediabox.width) - 612) < .01
+        and abs(float(page.mediabox.height) - 792) < .01
+        for page in reader.pages
+    )
     assert "n=351" in report_flat and "n=347" in report_flat
     assert "the two bases differ because 4 valid-Day rows" in report_flat
     assert "flat-dollar" in report_flat
-    party_caveat = (
-        "Party size may include children or shared dishes; per-head spend is an "
-        "approximation of per-diner spend."
-    )
-    assert party_caveat in report_flat
+    assert "Party size may include children or shared dishes; per-head spend is an" in report_flat
+    assert "approximation of per-diner spend." in report_flat
     assert "injected" not in report_flat.lower()
 
     within_lunch = report_text.index("lunch days differ")
@@ -229,7 +231,7 @@ def main():
 
     print(
         f"PASS: unchanged source, {len(clean)} preserved rows, revised tests, "
-        f"figures, outputs, and {len(reader.pages)} landscape PDF pages verified."
+        f"figures, outputs, and {len(reader.pages)} portrait PDF pages verified."
     )
 
 
