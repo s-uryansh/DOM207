@@ -5,13 +5,14 @@
   <a href="https://www.python.org/"><img alt="Python 3.11+" src="https://img.shields.io/badge/python-3.11%2B-3776AB?style=for-the-badge&logo=python&logoColor=white"></a>
   <a href="MP1/"><img alt="MP1: restaurant analytics" src="https://img.shields.io/badge/MP1-restaurant%20analytics-F39C12?style=for-the-badge"></a>
   <a href="MP3/"><img alt="MP3: country clustering" src="https://img.shields.io/badge/MP3-country%20clustering-8E44AD?style=for-the-badge"></a>
-  <a href="MP4/"><img alt="MP4: female labor-force participation" src="https://img.shields.io/badge/MP4-female%20labor-force%20participation-16A085?style=for-the-badge"></a>
+  <a href="MP4/"><img alt="MP4: female labor force participation" src="https://img.shields.io/badge/MP4-female%20labor%20force%20participation-16A085?style=for-the-badge"></a>
+  <a href="MP5/"><img alt="MP5: Australian real estate investment" src="https://img.shields.io/badge/MP5-Australian%20real%20estate%20investment-C0392B?style=for-the-badge"></a>
   <a href="https://github.com/s-uryansh/DOM207/commits"><img alt="Last commit" src="https://img.shields.io/github/last-commit/s-uryansh/DOM207?style=for-the-badge"></a>
   <a href="https://github.com/s-uryansh/DOM207"><img alt="Top language" src="https://img.shields.io/github/languages/top/s-uryansh/DOM207?style=for-the-badge"></a>
 </p>
 
 <p align="center">
-  Reproducible coursework for <strong>DOM207 / DOM3007 / DOM6401</strong> — three applied data-analysis projects and the weekly class exercises.
+  Reproducible coursework for <strong>DOM207 / DOM3007 / DOM6401</strong> — four applied data-analysis projects and the weekly class exercises.
 </p>
 
 ---
@@ -22,6 +23,7 @@
 - [MP1 — Foodie India restaurant analytics](#mp1--foodie-india-restaurant-analytics)
 - [MP3 — IMF ICT-worker clustering](#mp3--imf-ict-worker-clustering)
 - [MP4 — Female labor-force participation](#mp4--female-labor-force-participation)
+- [MP5 — Australian real estate investment](#mp5--australian-real-estate-investment)
 - [Class code](#class-code)
 - [Repository layout](#repository-layout)
 - [Requirements](#requirements)
@@ -35,6 +37,7 @@
 | [`MP1/`](MP1/) | Restaurant transaction analysis for Foodie India | Cleaning, descriptive summaries, hypothesis tests, post-hoc and sensitivity analysis | Landscape PDF report, 17 CSV result tables, 4 figures, automated verification |
 | [`MP3/`](MP3/) | IMF consulting study: grouping 37 countries by ICT-worker issues | Standardization, PCA, Ward/average hierarchical clustering, k-means, GMM, silhouette and bootstrap stability | Reproducible `analysis.py`, formal `report.docx` |
 | [`MP4/`](MP4/) | Government of India study: factors associated with female labor-force participation | Logit and probit maximum-likelihood estimation, average marginal effects, stratified five-fold cross-validation, sensitivity and influence diagnostics | Reproducible `analysis.py`, IEEE conference `Report.tex`, 4 figures |
+| [`MP5/`](MP5/) | Government of Australia study: per-head real estate investment vs the housing price index | Log-log supply equation, price elasticity, time-trend specification, multicollinearity (VIF), heteroskedasticity, normality, and autocorrelation diagnostics | Reproducible `analysis.py`, IEEE conference `Report.tex`, 7 figures |
 | [`class_codes/`](class_codes/) | Weekly tutorial and participation work | OLS regression and applied statistics exercises | Analysis scripts and read-only datasets |
 
 ## MP1 — Foodie India restaurant analytics
@@ -140,6 +143,42 @@ python -m pip install pandas numpy openpyxl scipy scikit-learn matplotlib statsm
 - [`MP4/MP4Specs.pdf`](MP4/MP4Specs.pdf) — the project specification;
 - [`MP4/reference/IEEE.tex`](MP4/reference/IEEE.tex) — the IEEE report structure reference.
 
+## MP5 — Australian real estate investment
+
+MP5 is a Government of Australia study that examines how per-head real estate investment behaves with respect to the housing price index over 1975 through 2016. It turns 42 annual records from `AusREInvest.xlsx` into a log-log supply equation with a time trend, compares price-elasticity estimates across specifications, and runs heteroskedasticity, normality, autocorrelation, and multicollinearity diagnostics, then translates the evidence into recommendations the client can act on.
+
+### Run it
+
+```bash
+cd MP5
+python analysis.py
+```
+
+The script prints the full evidence trail: descriptive statistics, correlations, variance inflation factors, the primary log-log supply equation, elasticity estimates across specifications, the price-trend interaction, and diagnostic tests. The seven figures are written to `MP5/figures/`.
+
+### What you get
+
+- `MP5/analysis.py` — single-file, reproducible analysis;
+- `MP5/Report.tex` — IEEE conference-format report source;
+- `MP5/report.pdf` — compiled report (reference artifact);
+- `MP5/figures/` — time-series, scatter, residual, quantile-quantile, fitted, and coefficient-comparison figures.
+
+The original `AusREInvest.xlsx` is never modified. The script computes per-head investment as `relinvest / pop` and fits log-log specifications so the price coefficient is an elasticity.
+
+### Dependencies
+
+MP5 intentionally has no pinned requirements file. The script uses the following stack:
+
+```bash
+python -m pip install pandas numpy openpyxl scipy scikit-learn matplotlib statsmodels
+```
+
+### Documentation
+
+- [`MP5/AGENTS.md`](MP5/AGENTS.md) — assignment instructions and report-writing conventions;
+- [`MP5/MP5Specs.pdf`](MP5/MP5Specs.pdf) — the project specification;
+- [`MP5/reference/IEEE.tex`](MP5/reference/IEEE.tex) — the IEEE report structure reference.
+
 ## Class code
 
 ### GPA determinants
@@ -191,6 +230,14 @@ DOM207/
 │   ├── figures/                 # Generated figures
 │   ├── reference/               # IEEE report structure reference
 │   └── MP4Specs.pdf             # Assignment specification
+├── MP5/
+│   ├── analysis.py              # Full investment analysis
+│   ├── AusREInvest.xlsx         # Immutable source workbook
+│   ├── Report.tex               # IEEE conference report source
+│   ├── report.pdf               # Compiled report (reference artifact)
+│   ├── figures/                 # Generated figures
+│   ├── reference/               # IEEE report structure reference
+│   └── MP5Specs.pdf             # Assignment specification
 └── class_codes/
     ├── Class Participation/     # GPA regression exercise and dataset
     └── Tutorial/                # Tutorial datasets
@@ -203,16 +250,18 @@ DOM207/
 | MP1 | Python 3 | `./run.sh` creates `.venv` and installs `requirements.txt` |
 | MP3 | Python 3.11+ | Install the packages listed above |
 | MP4 | Python 3.11+ | Install the packages listed above |
+| MP5 | Python 3.11+ | Install the packages listed above |
 | Class code | Python 3 | Install `pandas`, `statsmodels`, and `openpyxl` |
 
 MP1 ships a `.gitignore` covering virtual environments, caches, and local editor files.
 
 ## Reproducibility and data handling
 
-- Source workbooks are treated as immutable: `MP1/Restaurant.xlsx`, `MP3/dataset/ICTIndiv.xlsx`, and `MP4/IWomenJob.xlsx` are only read.
+- Source workbooks are treated as immutable: `MP1/Restaurant.xlsx`, `MP3/dataset/ICTIndiv.xlsx`, `MP4/IWomenJob.xlsx`, and `MP5/AusREInvest.xlsx` are only read.
 - MP1 verifies the source hash, row count, anomaly flags, generated artifacts, and report content.
 - MP3 fixes `random_state=42`, compares multiple clustering methods, and reports stability and sensitivity instead of presenting one fragile solution.
 - MP4 fixes `random_state=2026`, recomputes `nwifeinc` from the raw inputs and reports the residual against the supplied column, and reports out-of-fold AUC, block likelihood-ratio tests, sensitivity coefficients, VIF diagnostics, and leave-one-out influence instead of presenting one fragile solution.
+- MP5 computes per-head investment as `relinvest / pop` and fits a log-log supply equation so the price coefficient is an elasticity; it reports elasticity estimates across specifications, variance inflation factors, and heteroskedasticity, normality, and autocorrelation tests instead of presenting one fragile solution.
 - Generated outputs are committed for review; rerunning the scripts regenerates them.
 - No credentials, secrets, or external services are required.
 
