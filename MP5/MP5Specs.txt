@@ -1,0 +1,82 @@
+                                                                                                       1
+
+
+
+             DOM207-DOM3007-DOM6401: MP5
+BACKGROUND
+Several years back, I, along with three other colleagues of mine, worked on and completed a project
+involving the real estate business in cities in Australia. MP5 is a just snapshot of that project.
+
+INTRODUCTION
+     In this project, you’re members of the project team in a DSA consulting firm named DOM207-
+      DOM3007-DOM6401, working on a project contracted out by your client – a Department of the
+      Government of Australia
+     The data set AusREInvest.xlsx has been shared with you. This is proprietary data, so you’re
+      NOT allowed to add any new data to this file
+
+WORK AND SUBMISSION REQUIREMENTS AND GUIDELINES
+     For this project, you must work in a group of no more than 2 (only in an exceptional case 3)
+      students per group.
+     Solo work is also allowed and appreciated.
+     Each group must submit only one project report on BB.
+     Each submission must contain the following items:
+          1) A report in word doc or PDF with an appropriate title page. This page should contain a
+               title for the project, your name and your collaborator name(s), your roll #, course
+               name and #, and your instructor’s name
+          2) The report must be divided into at least the following sections (section heading
+               MANDATORY):
+          3) Introduction (say what you’re set out to achieve in this project)
+          4) Data preprocessing (provide details of all data cleansing steps you’ve undertaken, if
+               any)
+          5) Data visualization (provide some worthwhile charts, diagrams, etc. for visualization – do
+               not provide useless diagrams – you’ll be penalized if you do)
+          6) Hypotheses or theory building (if appropriate)
+          7) Analysis (Verification of model assumptions, and complete technical analysis with
+               justifications for all of your findings). You may insert a few helpful screenshots of your
+               work (C/P from your output). These must be relevant and persuasive. Do not put
+               rubbish diagrams or figures – you’ll be penalized if you do!!!
+          8) Recommendations Your final recommendations with proper justifications (based on
+               your findings)
+          9) References
+          10) Submit the project report (Word doc or PDF) and your supporting R or Python files
+               containing the complete analysis (project files and .R or .py files).
+          11) There’s no fixed requirement for word or page limit for the report. However, the material
+               in it should be substantial and meaningful, exactly like a project report you’d submit to
+               your client
+          12) NOTE: SUBMISSION ON BB is completely your responsibility. Submit well
+               BEFORE the deadline. Last-minute technical failures (BB problems; network
+                                                                                                           2
+
+
+                 outages; computer crashes; dogs or cats or grandpas or grandmas or interviews) or
+                 sickness will NOT be considered in any way (if you’re sick, ask your partner ASAP
+                 to submit). Failure to conform to these requirements results in a zero, meaning in
+                 the corporate context, your company loses the contract. So, be responsible and work
+                 in a professional capacity.
+
+    VERY IMPORTANT:
+           The project must be as formal as possible
+           Project submission policy as already announced
+           If you do not follow the above directions, you’ll be heavily penalized.
+           The grading will be TOUGH
+           Project submission deadline is inflexible and strictly enforced!!
+PROJECT FOR DOM207-DOM3007-DOM6401
+An Australian Government organization that was involved with this project wanted to assess the real
+estate investment market in Australia and the prevailing price index there for real estate for the years 1975
+through 2016. One important aspect of the investigation concerned how the per-head RE investment
+behaves with respect to the index.
+For this, you need to consider some sort of supply equation for the RE stock in Australia.
+Although the project is not overly difficult, the question considered in the project is rather tricky.
+Consider the following:
+       All hypotheses should be driven by theory and logical arguments.
+       Is the RE investment elasticity for price index large or small? Is it significant?
+       Are the STDERRs on trend reliable in this case?
+       Can you conclude that the real per-head RE investment is influenced at all by the index?
+       What other factors could be captured in the trend?
+       You need to check all sorts of things like data consistency, descriptive stats, validity of
+        assumptions, MC, HS, interactions, quadratics, and so on and so forth.
+       Dataviz is important
+       Your discussions, conclusions, and recommendations must be robust (based on your findings, not
+        on speculation)
+The actual data file is AusREInvest.xlsx, which contains annual data.
+
